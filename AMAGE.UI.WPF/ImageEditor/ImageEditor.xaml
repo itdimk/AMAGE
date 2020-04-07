@@ -1,0 +1,48 @@
+﻿<Window x:Class="AMAGE.UI.WPF.ImageEditor.ImageEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prp="clr-namespace:AMAGE.UI.WPF.Properties"
+        xmlns:local="clr-namespace:AMAGE.UI.WPF.ImageEditor"
+        xmlns:xc="http://schemas.xceed.com/wpf/xaml/avalondock"
+        mc:Ignorable="d"
+        
+        WindowStartupLocation="CenterScreen" 
+        Title="ImageEditor"
+        FontSize="16"
+        
+        Closing="Window_Closing">
+
+    <xc:DockingManager x:Name="uiDockManager">
+        
+        <xc:DockingManager.Theme>
+            <xc:Vs2013BlueTheme/>
+        </xc:DockingManager.Theme>
+        
+        <xc:LayoutRoot>
+            <xc:LayoutPanel x:Name="uiLayoutPanel">
+
+                <xc:LayoutAnchorablePane DockWidth="0.5*">
+                    <xc:LayoutAnchorable Title="{x:Static prp:Resources.Menu}" CanHide="False" CanClose="False">
+                        <local:MenuPanel x:Name="uiMenu"/>
+                    </xc:LayoutAnchorable>
+                </xc:LayoutAnchorablePane>
+
+                <xc:LayoutAnchorablePane DockWidth="1*">
+                    <xc:LayoutAnchorable Title="{x:Static prp:Resources.Image}" CanHide="False" CanClose="False">
+                        <local:ImagePanelGroup x:Name="uiImages"/>
+                    </xc:LayoutAnchorable>
+                </xc:LayoutAnchorablePane>
+
+                <xc:LayoutAnchorablePane DockWidth="1*">
+                    <xc:LayoutAnchorable Title="{x:Static prp:Resources.Tools}" CanHide="False" CanClose="False">
+                        <local:ToolPanelGroup x:Name="uiTools"/>
+                    </xc:LayoutAnchorable>
+                </xc:LayoutAnchorablePane>
+
+            </xc:LayoutPanel>
+        </xc:LayoutRoot>
+    </xc:DockingManager>
+
+</Window>

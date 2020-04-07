@@ -1,0 +1,48 @@
+﻿<Window x:Class="AMAGE.UI.WPF.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prp="clr-namespace:AMAGE.UI.WPF.Properties"
+        mc:Ignorable="d"
+        Title="Settings"
+        FontSize="16"
+        Width="600"
+        Height="400">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Styles\LightSky.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="20" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static prp:Resources.Language}"/>
+                <ComboBox x:Name="uiLanguages" Margin="5" MinWidth="100"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{x:Static prp:Resources.UseAsyncMode}"/>
+                <CheckBox x:Name="uiUseAsync" Margin="8"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Margin="5" Grid.Row="1" Orientation="Horizontal">
+            <Button Content="{x:Static prp:Resources.OK}" Style="{StaticResource LightSky}" Click="OK_Click"/>
+            <Button Content="{x:Static prp:Resources.Cancel}" Style="{StaticResource LightSky}" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+
+
+</Window>

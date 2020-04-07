@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="AMAGE.UI.WPF.ImageEditor.MenuPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AMAGE.UI.WPF.ImageEditor"
+             xmlns:prp="clr-namespace:AMAGE.UI.WPF.Properties"
+
+             mc:Ignorable="d" 
+             d:DesignWidth="300"
+             d:DesignHeight="450">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Styles\LightSky.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel Margin="5">
+
+        <GroupBox Header="{x:Static prp:Resources.File}">
+            <StackPanel>
+
+                <Button x:Name="uiOpenFile" Margin="5" Content="{x:Static prp:Resources.OpenFile}" 
+                        Style="{StaticResource LightSky}" Click="OpenFile_Click"/>
+
+                <Button x:Name="uiSaveFile" Margin="5" Content="{x:Static prp:Resources.SaveFile}" 
+                        Style="{StaticResource LightSky}" Click="SaveFile_Click"/>
+
+                <Button x:Name="uiCloseFile" Margin="5" Content="{x:Static prp:Resources.CloseFile}" 
+                        Style="{StaticResource LightSky}" Click="CloseFile_Click"/>
+
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="{x:Static prp:Resources.Tools}">
+            <StackPanel>
+
+                <Button x:Name="uiApplyTool" Margin="5" Content="{x:Static prp:Resources.Apply}" Style="{StaticResource LightSky}" 
+                        Click="ApplyTool_Click"/>
+
+                <Button x:Name="uiPlay" Margin="5" Content="{x:Static prp:Resources.PlayAnimation}" Style="{StaticResource LightSky}" 
+                        Click="Play_Click"/>
+
+                <Button x:Name="uiStop" Margin="5" Content="{x:Static prp:Resources.StopAnimation}" Style="{StaticResource LightSky}" 
+                        Click="Stop_Click"/>
+                
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="{x:Static prp:Resources.Service}">
+            <StackPanel>
+
+                <Button x:Name="uiAppSettings" Margin="5" Content="{x:Static prp:Resources.Settings}" Style="{StaticResource LightSky}" 
+                        Click="AppSettings_Click"/>
+
+                <Button x:Name="uiAppAbout" Margin="5" Content="{x:Static prp:Resources.AboutApp}" Style="{StaticResource LightSky}" 
+                        Click="AppAbout_Click"/>
+
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+
+</UserControl>

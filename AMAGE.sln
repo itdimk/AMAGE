@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMAGE.UI.WPF", "AMAGE.UI.WPF\AMAGE.UI.WPF.csproj", "{74C420A6-88A8-4E2B-962A-3063B1B41274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMAGE.Presentation", "AMAGE.Presentation\AMAGE.Presentation.csproj", "{C93A8C3F-E213-4D0A-9338-9B209FDF45EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMAGE.Imaging", "AMAGE.Imaging\AMAGE.Imaging.csproj", "{7C836191-5207-4BEE-9E3E-D66F6CB620F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMAGE.Services", "AMAGE.Services\AMAGE.Services.csproj", "{584F3826-32BF-4D6B-A12E-1620C62DB40D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMAGE.Common", "AMAGE.Common\AMAGE.Common.csproj", "{CA175F26-8B97-4E59-9010-406BC75C4037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74C420A6-88A8-4E2B-962A-3063B1B41274}.Debug|x64.ActiveCfg = Debug|x64
+		{74C420A6-88A8-4E2B-962A-3063B1B41274}.Debug|x64.Build.0 = Debug|x64
+		{74C420A6-88A8-4E2B-962A-3063B1B41274}.Release|x64.ActiveCfg = Release|x64
+		{74C420A6-88A8-4E2B-962A-3063B1B41274}.Release|x64.Build.0 = Release|x64
+		{C93A8C3F-E213-4D0A-9338-9B209FDF45EF}.Debug|x64.ActiveCfg = Debug|x64
+		{C93A8C3F-E213-4D0A-9338-9B209FDF45EF}.Debug|x64.Build.0 = Debug|x64
+		{C93A8C3F-E213-4D0A-9338-9B209FDF45EF}.Release|x64.ActiveCfg = Release|x64
+		{C93A8C3F-E213-4D0A-9338-9B209FDF45EF}.Release|x64.Build.0 = Release|x64
+		{7C836191-5207-4BEE-9E3E-D66F6CB620F0}.Debug|x64.ActiveCfg = Debug|x64
+		{7C836191-5207-4BEE-9E3E-D66F6CB620F0}.Debug|x64.Build.0 = Debug|x64
+		{7C836191-5207-4BEE-9E3E-D66F6CB620F0}.Release|x64.ActiveCfg = Release|x64
+		{7C836191-5207-4BEE-9E3E-D66F6CB620F0}.Release|x64.Build.0 = Release|x64
+		{584F3826-32BF-4D6B-A12E-1620C62DB40D}.Debug|x64.ActiveCfg = Debug|x64
+		{584F3826-32BF-4D6B-A12E-1620C62DB40D}.Debug|x64.Build.0 = Debug|x64
+		{584F3826-32BF-4D6B-A12E-1620C62DB40D}.Release|x64.ActiveCfg = Release|x64
+		{584F3826-32BF-4D6B-A12E-1620C62DB40D}.Release|x64.Build.0 = Release|x64
+		{CA175F26-8B97-4E59-9010-406BC75C4037}.Debug|x64.ActiveCfg = Debug|x64
+		{CA175F26-8B97-4E59-9010-406BC75C4037}.Debug|x64.Build.0 = Debug|x64
+		{CA175F26-8B97-4E59-9010-406BC75C4037}.Release|x64.ActiveCfg = Release|x64
+		{CA175F26-8B97-4E59-9010-406BC75C4037}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

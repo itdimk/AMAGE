@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="AMAGE.UI.WPF.ImageEditor.ToolPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AMAGE.UI.WPF.ImageEditor"
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+
+             mc:Ignorable="d" 
+             d:DesignWidth="300"
+             d:DesignHeight="300">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="uiTools" Grid.Row="0" SelectionChanged="Tools_SelectionChanged"
+                 MouseLeftButtonDown="Tools_MouseLeftButtonDown"/>
+
+        <ContentControl x:Name="uiTuningSpace" Grid.Row="2" />
+
+        <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="4"/>
+
+    </Grid>
+    
+</UserControl>

@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="AMAGE.UI.WPF.Tuners.SnapshotTuner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:prp="clr-namespace:AMAGE.UI.WPF.Properties"
+             xmlns:local="clr-namespace:AMAGE.UI.WPF.Tuners"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Styles\LightSky.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="uiSnapshots" Grid.Row="0" Grid.Column="2" SelectionChanged="Snapshots_SelectionChanged"/>
+
+        <xc:PropertyGrid x:Name="uiPropertyGrid" Grid.Row="0" Grid.Column="0" ShowSearchBox="False" ShowSortOptions="False"
+                         PropertyValueChanged="PropertyGrid_PropertyValueChanged"/>
+
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="1" VerticalAlignment="Stretch"
+                      HorizontalAlignment="Center" Width="4"/>
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Orientation="Horizontal">
+
+            <Button x:Name="uiAdd" Margin="4" Content="{x:Static prp:Resources.Add}"
+                    Style="{StaticResource LightSky}" Click="AddSnapshot_Click"/>
+
+            <Button x:Name="uiRemove" Margin="4" Content="{x:Static prp:Resources.Remove}"
+                    Style="{StaticResource LightSky}" Click="RemoveSnapshot_Click"/>
+            
+        </StackPanel>
+
+    </Grid>
+    
+</UserControl>
